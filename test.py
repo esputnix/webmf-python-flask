@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 import sys
-for path in sys.path:
-    print('... %s' % path)
 import unittest
 import app
+
+for path in sys.path:
+    print('... sys path %s' % path)
 
 
 class TestHello(unittest.TestCase):
