@@ -5,13 +5,14 @@ pipeline {
             steps {
                 withEnv(["HOME=${env.WORKSPACE}"]) {
                     sh 'pip install --user -r requirements.txt'
+                    sh 'python test.py'
                 }
             }
         }
 
         stage('Test') {
             steps {
-                sh 'python test.py'
+                sh 'pwd'
             }  
         }
 
