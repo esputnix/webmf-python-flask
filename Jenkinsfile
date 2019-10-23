@@ -12,8 +12,10 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'pwd'
-            }  
+                withEnv(["HOME=${env.WORKSPACE}"]) {
+                    sh 'python test.py'
+                }
+            }
         }
 
 
