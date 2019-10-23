@@ -1,6 +1,10 @@
 #!/usr/bin/env python
+import sys
+for path in sys.path:
+    print('... %s' % path)
 import unittest
 import app
+
 
 class TestHello(unittest.TestCase):
 
